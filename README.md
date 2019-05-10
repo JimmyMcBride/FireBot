@@ -1,0 +1,1 @@
+A discord bot I'm building for my ESO guild.
