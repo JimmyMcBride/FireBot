@@ -7,4 +7,10 @@ bot.on('ready', () => {
     console.log('Your bot is online.')
 })
 
+bot.on('message', msg => {
+    if (msg.content === "Hello, Fire Mage!"){
+        msg.reply('Hello, friend!')
+    }
+})
+
 bot.login(token)
