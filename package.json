@@ -6,10 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JimmyMcBride/HoF-Discord-Bot.git"
-  },
   "keywords": [
     "hof",
     "harbingers",
@@ -22,10 +18,6 @@
   ],
   "author": "FireNinja - Jimmy McBride",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JimmyMcBride/HoF-Discord-Bot/issues"
-  },
-  "homepage": "https://github.com/JimmyMcBride/HoF-Discord-Bot#readme",
   "dependencies": {
     "discord.js": "^11.4.2"
   }
