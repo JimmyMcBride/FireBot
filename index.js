@@ -33,18 +33,21 @@ Also, try typing **!ping** or **!marco** to play a game!`)
 
     switch(args[0]){
         case 'ping':
-            msg.reply('pong!')
-        break
+          msg.channel.sendMessage('pong!')
+          break
 
         case 'marco':
-            msg.reply('polo!')
-        break
+          msg.channel.sendMessage('polo!')
+          break
 
         case 'roll':
-            msg.reply(`rolled a ${randomNumber}! ${emoji()}`)
-        break
+          msg.reply(`rolled a ${randomNumber}! ${emoji()}`)
+          break
 
         case 'info':
+          if (args[1] === 'version') {
+            msg.channel.sendMessage('Version 1.0.0')
+          }
     }
 
 
