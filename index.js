@@ -87,6 +87,9 @@ Thanks for joining! We kindly ask that all of our guild members change their nic
 What's your CP level? If you haven't reached CP yet, what level is your main?
 What class/role do you prefer to play?
 What do you hope to get out of HoF?`)
+
+  let role = member.guild.roles.find(r => r.name === "Recruit")
+  member.addRole(role).catch(console.error)
 })
 
 bot.login(token)
