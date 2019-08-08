@@ -2,7 +2,7 @@ const { Client, Attachment } = require('discord.js')
 const bot = new Client()
 
 require('dotenv/config')
-require('./index')
+// require('./index')
 
 const config = require('./config.json')
 const token = process.env.TOKEN
