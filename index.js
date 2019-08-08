@@ -92,4 +92,9 @@ What do you hope to get out of HoF?`)
   member.addRole(role).catch(console.error)
 })
 
+var http = require("http")
+setInterval(function() {
+    http.get("http://hof-discord-bot.herokuapp.com")
+}, 300000)
+
 bot.login(token)
