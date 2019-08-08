@@ -28,33 +28,34 @@ bot.on('message', msg => {
         }
     }
 
-    if (msg.content === 'Introduce yourself, Fire Mage.'){
-        msg.channel.send(`Hey, ${msg.author}! I'm a discord bot built by the **ALL MIGHTY** 🔥 Fire Ninja 🔥.
-You can type **!roll** to get a random number between 1-100.
-Also, try typing **!ping** or **!marco** to play a game!`)
-    }
-
     if (msg.content === 'what is my avatar') {
-      msg.reply(msg.author.avatarURL);
+      msg.reply(msg.author.avatarURL)
     }
 
     switch(args[0]){
-        case 'ping':
-          msg.channel.sendMessage('pong!')
-          break
 
-        case 'marco':
-          msg.channel.sendMessage('polo!')
-          break
+      case 'intro':
+        msg.channel.send(`Hey, ${msg.author}! I'm a discord bot built by the **ALL MIGHTY** 🔥 Fire Ninja 🔥.
+You can type **!roll** to get a random number between 1-100.
+Also, try typing **!ping** or **!marco** to play a game!`)
+        break
 
-        case 'roll':
-          msg.reply(`rolled a ${randomNumber}! ${emoji()}`)
-          break
+      case 'ping':
+        msg.channel.sendMessage('pong!')
+        break
 
-        case 'info':
-          if (args[1] === 'version') {
-            msg.channel.sendMessage('Version 1.0.1')
-          }
+      case 'marco':
+        msg.channel.sendMessage('polo!')
+        break
+
+      case 'roll':
+        msg.reply(`rolled a ${randomNumber}! ${emoji()}`)
+        break
+
+      case 'info':
+        if (args[1] === 'version') {
+          msg.channel.sendMessage('Version 1.0.1')
+        }
     }
 })
 
@@ -65,7 +66,7 @@ bot.on('guildMemberAdd', member => {
   if (!welcomeChannel) return
   if (!botTestChannel) return
 
-  botTestChannel.send(`Hey {user}, welcome to **{server}**! 🔥
+  botTestChannel.send(`Hey ${member}, welcome to **${member.guild}**! 🔥
 
   Thanks for joining! We kindly ask that all of our guild members change their nickname in the guild to your ESO username so it's easier to know who's who. Thanks!
 
