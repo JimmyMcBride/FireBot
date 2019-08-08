@@ -29,9 +29,13 @@ bot.on('message', msg => {
     }
 
     if (msg.content === 'Introduce yourself, Fire Mage.'){
-        msg.channel.send(`I'm a discord bot built by the **ALL MIGHTY** 🔥 Fire Ninja 🔥.
+        msg.channel.send(`Hey, ${msg.author}! I'm a discord bot built by the **ALL MIGHTY** 🔥 Fire Ninja 🔥.
 You can type **!roll** to get a random number between 1-100.
 Also, try typing **!ping** or **!marco** to play a game!`)
+    }
+
+    if (msg.content === 'what is my avatar') {
+      msg.reply(msg.author.avatarURL);
     }
 
     switch(args[0]){
@@ -49,7 +53,7 @@ Also, try typing **!ping** or **!marco** to play a game!`)
 
         case 'info':
           if (args[1] === 'version') {
-            msg.channel.sendMessage('Version 1.0.0')
+            msg.channel.sendMessage('Version 1.0.1')
           }
     }
 })
