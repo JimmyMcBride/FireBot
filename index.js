@@ -1,8 +1,11 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
+require('dotenv/config')
+require('./index')
+
 const config = require('./config.json')
-const token = config.token
+const token = process.env.TOKEN
 
 bot.on('ready', () => {
     console.log('Fire Mage is online!')
