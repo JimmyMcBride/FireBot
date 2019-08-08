@@ -6,7 +6,6 @@ const token = config.token
 
 bot.on('ready', () => {
     console.log('Fire Mage is online!')
-    // console.log(`${config.token}`)
 })
 
 bot.on('message', msg => {
