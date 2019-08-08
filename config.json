@@ -1,4 +1,9 @@
 {
   "prefix": "!",
-  "token": "NTc2NTMzNjMwMzExMjAyODE5.XUuKiw.DX_v63WuwiJQA4uQefmX7zvk8FA"
+  "token": "NTc2NTMzNjMwMzExMjAyODE5.XUuKiw.DX_v63WuwiJQA4uQefmX7zvk8FA",
+
+  "activity": {
+    "streaming": false,
+    "game": "The Elder Scrolls"
+  }
 }
