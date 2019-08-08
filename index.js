@@ -1,5 +1,5 @@
-const Discord = require('discord.js')
-const bot = new Discord.Client()
+const { Client, Attachment } = require('discord.js')
+const bot = new Client()
 
 require('dotenv/config')
 require('./index')
@@ -52,8 +52,24 @@ Also, try typing **!ping** or **!marco** to play a game!`)
             msg.channel.sendMessage('Version 1.0.0')
           }
     }
+})
 
+bot.on('guildMemberAdd', member => {
+  const welcomeChannel = member.guild.channels.find(channel => channel.name === '👀welcome-channel')
+  const botTestChannel = member.guild.channels.find(channel => channel.name === '🤖bot-test')
 
+  if (!welcomeChannel) return
+  if (!botTestChannel) return
+
+  botTestChannel.send(`Hey {user}, welcome to **{server}**! 🔥
+
+  Thanks for joining! We kindly ask that all of our guild members change their nickname in the guild to your ESO username so it's easier to know who's who. Thanks!
+
+  While you wait, please tell us a little about yourself:
+
+  What's your CP level? If you haven't reached CP yet, what level is your main?
+  What class/role do you prefer to play?
+  What do you hope to get out of HoF?`)
 })
 
 bot.login(token)
