@@ -1,5 +1,6 @@
 {
   "prefix": "!",
+  "version": "1.0.3",
   "activity": {
     "streaming": false,
     "game": "The Elder Scrolls"
