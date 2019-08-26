@@ -59,12 +59,10 @@ bot.on('raw', event => {
 })
 
 bot.on('messageReactionAdd', (messageReaction, user) => {
-  console.log(`${user.username} reacted.`)
+  console.log(`${user.username} added the "${roleName}" roll!`)
 
   const roleName = messageReaction.emoji.name
   const member = messageReaction.message.guild.members.find(member => member.id === user.id)
-
-  console.log(roleName)
 
   const html = member.guild.roles.get('614143178517512212')
   const frontEnd = member.guild.roles.get('614141223904608292')
