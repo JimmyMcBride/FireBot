@@ -115,7 +115,7 @@ bot.on('messageReactionAdd', (messageReaction, user) => {
     member.addRole(reactNative)
   } else if (roleName === 'angular') {
     member.addRole(angular)
-  } 
+  }
 })
 
 bot.on('message', msg => {
