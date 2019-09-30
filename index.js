@@ -14,7 +14,7 @@ bot.commands = new Enmap()
 
 // Let's us know bot is online 🍏
 bot.on('ready', () => {
-  console.log('FireBot is live!')
+  console.log('FireBot is live!!!')
   bot.user.setActivity('with fire!')
 })
 
