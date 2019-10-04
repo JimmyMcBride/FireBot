@@ -2,7 +2,7 @@
 const { Client } = require('discord.js')
 const bot = new Client()
 
-// Hide my token 🙈
+// Hide the token 🙈
 require('dotenv/config')
 
 // Break up bot into multiple files 💔
