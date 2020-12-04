@@ -1,4 +1,4 @@
-// Set up bot 🤖
+// Set up bot 🦠
 const { Client } = require("discord.js");
 const bot = new Client();
 
