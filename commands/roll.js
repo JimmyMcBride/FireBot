@@ -18,7 +18,7 @@ exports.run = (bot, msg, args) => {
       return "🔥";
     }
   };
-  msg.reply(`rolled a ${randomNumber}! ${emoji()}`).catch(console.error);
+  msg.reply(`rolled a **${randomNumber}**! ${emoji()}`).catch(console.error);
 };
 
 exports.help = {
