@@ -1,7 +1,7 @@
-module.exports = async (bot, messageReaction, user) => {
+module.exports = async (_, messageReaction, user) => {
   const roleName = messageReaction.emoji.name;
   const member = messageReaction.message.guild.members.find(
-    member => member.id === user.id
+    (member) => member.id === user.id
   );
 
   const html = member.guild.roles.get("614143178517512212");

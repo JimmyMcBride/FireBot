@@ -20,10 +20,11 @@
   "dependencies": {
     "discord": "^0.8.2",
     "discord.js": "^11.4.2",
+    "dotenv": "^8.0.0",
     "enmap": "^5.1.2",
     "env": "^0.0.2",
+    "eslint": "^7.15.0",
     "fs": "0.0.1-security",
-    "nodemon": "^1.19.1",
-    "dotenv": "^8.0.0"
+    "nodemon": "^1.19.1"
   }
 }

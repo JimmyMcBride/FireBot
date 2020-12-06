@@ -21,7 +21,7 @@ bot.on("ready", () => {
 // Set up event file directories 🌄
 fs.readdir("./events/", (err, files) => {
   if (err) console.error;
-  files.forEach(file => {
+  files.forEach((file) => {
     if (!file.endsWith(".js")) return;
     const evt = require(`./events/${file}`);
     const evtName = file.split(".")[0];
@@ -33,7 +33,7 @@ fs.readdir("./events/", (err, files) => {
 // Set up message commands 💬
 fs.readdir("./commands/", async (err, files) => {
   if (err) return;
-  files.forEach(file => {
+  files.forEach((file) => {
     if (!file.endsWith(".js")) return;
     const props = require(`./commands/${file}`);
     const cmdName = file.split(".")[0];
@@ -43,4 +43,5 @@ fs.readdir("./commands/", async (err, files) => {
 });
 
 // Login bot 🌳
+// eslint-disable-next-line no-undef
 bot.login(process.env.TOKEN);
