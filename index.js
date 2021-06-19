@@ -59,28 +59,5 @@ bot.on("message", (message) => {
   }
 })
 
-// fs.readdir("./events/", (err, files) => {
-//   if (err) console.error
-//   files.forEach((file) => {
-//     if (!file.endsWith(".js")) return
-//     const evt = require(`./events/${file}`)
-//     const evtName = file.split(".")[0]
-//     console.log(`Loaded event ${evtName}`)
-//     bot.on(evtName, evt.bind(null, bot))
-//   })
-// })
-
-// Set up message commands 💬
-// fs.readdir("./commands/", async (err, files) => {
-//   if (err) return
-//   files.forEach((file) => {
-//     if (!file.endsWith(".js")) return
-//     const props = require(`./commands/${file}`)
-//     const cmdName = file.split(".")[0]
-//     console.log(`Loaded command: ${cmdName}`)
-//     bot.commands.set(cmdName, props)
-//   })
-// })
-
 // Login bot 🌳
 bot.login(token)
