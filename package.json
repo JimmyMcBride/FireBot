@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "hof",
@@ -18,12 +18,14 @@
   "author": "FireNinja - Jimmy McBride",
   "license": "ISC",
   "dependencies": {
-    "discord": "^0.8.2",
-    "discord.js": "^11.4.2",
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.0.0",
     "enmap": "^5.1.2",
     "env": "^0.0.2",
     "fs": "0.0.1-security",
-    "nodemon": "^1.19.1",
-    "dotenv": "^8.0.0"
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.1"
   }
 }
