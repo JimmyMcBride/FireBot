@@ -1,7 +1,12 @@
-exports.run = (bot, msg, args) => {
-  msg.channel.send(msg.author.avatarURL).catch(console.error);
-};
-
-exports.help = {
-  name: "avatar"
-};
+module.exports = {
+  name: "avatar",
+  execute(msg) {
+    msg.channel.send(
+      "https://cdn.discordapp.com/avatars/" +
+        msg.author.id +
+        "/" +
+        msg.author.avatar +
+        ".jpeg"
+    )
+  },
+}
