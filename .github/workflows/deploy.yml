@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - trunk
+
+jobs:
+  your-job-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: npm install axios
+      - name: Hit GET endpoint with secret token
+        env:
+          SECRET_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          const axios = require('axios');
+          const secretToken = process.env.GITHUB_TOKEN;
+          const headers = { 'Authorization': `Bearer ${secretToken}` };
+          const url = 'https://deku-webhooks.jimmymcbride.dev/deploy/firebot';
+          axios.get(url, { headers })
+            .then(response => {
+              console.log(response.data);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+
+      
+      
